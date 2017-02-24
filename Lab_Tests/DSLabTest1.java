@@ -1,4 +1,3 @@
-
 public class linear_search_recursion {
 	public static void main(String[] args) {
 		linear_search_recursion LSR = new linear_search_recursion();
