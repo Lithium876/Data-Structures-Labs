@@ -34,7 +34,6 @@ public class labTest1 {
 			System.out.println("The index of you search value is: "+str_res2+"\n");
 		}
 		//End of Task 5
-		
 
 	}
 	
@@ -47,23 +46,13 @@ public class labTest1 {
 			Temp = str_Arr[Index];
 			Cnt2 = Index;
 			while(Cnt2>0){
-				if(Temp.compareTo(str_Arr[Cnt2-1]) < 0){
+				if(Temp.compareToIgnoreCase(str_Arr[Cnt2-1]) < 0){
 					break;
 				}
 				str_Arr[Cnt2] = str_Arr[Cnt2-1];
 				Cnt2--;
 			}
 			str_Arr[Cnt2] = Temp;
-			
-			System.out.print("Pass "+Index+":\t\t");
-			for(int l=0;l<Size;l++){
-				if(l==str_Arr.length-1){
-					System.out.print(str_Arr[l]);
-				}else{
-					System.out.print(str_Arr[l]+", ");
-				}
-			}
-			System.out.println();
 		}
 		return str_Arr;
 	}
@@ -80,10 +69,10 @@ public class labTest1 {
 			if(SValue.equals(str_Arr[Mid])){
 				return Mid;
 			}
-			if(SValue.compareTo(str_Arr[Mid]) > 0){
+			if(SValue.compareToIgnoreCase(str_Arr[Mid]) > 0){
 				End = Mid - 1;
 			}
-			if(SValue.compareTo(str_Arr[Mid]) < 0){
+			if(SValue.compareToIgnoreCase(str_Arr[Mid]) < 0){
 				Start = Mid + 1;
 			}
 		}
